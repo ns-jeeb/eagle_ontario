@@ -5,7 +5,7 @@
 }
 
 #display_page{
-	background-color: white;
+	
 	height: 50px;	
 	width: 1024px;
 	margin-left: auto;
@@ -23,11 +23,12 @@
 .l_r_display{
 	position : absolute;
 	width: 52%;
-	border: 1px solid red;
 	float: right;
 	padding: 10px;
+	color: white;
 }
 
-#display{
+#display {
 	text-align: right;
 }
+#admin{color: #BFC8CE;font-family: sans-serif;}

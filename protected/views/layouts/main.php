@@ -117,7 +117,7 @@ function displayPage()
 	
 <div id="display_page">
 	<div class="l_r_display"> <?php displayPage();?></div>
-	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/index">Admin</a></div>
+	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/index" id="admin">Admin</a></div>
 
 </div>
 
@@ -135,9 +135,9 @@ function displayPage()
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> Eagle Ontario Metal and Scrap.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		<?php echo "Powerd by ". "<a href='http://inlightdevelopment.com/'>Inlightdevelopment</a>"; ?>
 	</div><!-- footer -->
 
 </div><!-- page -->
