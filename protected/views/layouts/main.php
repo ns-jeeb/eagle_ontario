@@ -1,4 +1,78 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @var $this Controller */
+
+function getSelected($button)
+{
+
+	if (Yii::app()->getController()->id == "site")
+	{
+		$page = Yii::app()->getController()->getAction()->id;
+		if ($button == $page)
+		{
+			return "_s";
+		} else if ($page == "index" && $button == "home")
+		{
+			return "_s";
+		} else {
+			return "";
+		}
+	}
+}
+
+function getUrl($button)
+{
+	if ($button =="home"){
+		return  Yii::app()->request->baseUrl.'/index.php?r=site/index';
+			
+	}elseif ($button == "contact"){
+		return  Yii::app()->request->baseUrl.'/index.php?r=site/contact';
+	}
+	if ($button =="items"){
+		return  Yii::app()->request->baseUrl.'/index.php?r=site/items';
+	}elseif ($button == "services"){
+		return  Yii::app()->request->baseUrl.'/index.php?r=site/services';
+	}
+}
+
+function getImageUrl($button)
+{
+	if ($button =="home"){
+		return  Yii::app()->request->baseUrl.'/images/menu/home'.getSelected($button).'.png';
+
+	}elseif ($button == "contact"){
+		return  Yii::app()->request->baseUrl.'/images/menu/contact'.getSelected($button).'.png';
+	}
+	if ($button =="services"){
+		return  Yii::app()->request->baseUrl.'/images/menu/services'.getSelected($button).'.png';
+	}elseif ($button == "items"){
+		return  Yii::app()->request->baseUrl.'/images/menu/items'.getSelected($button).'.png';
+	}
+}
+
+function displayPage()
+{	
+	$button = Yii::app()->getController()->getAction()->id;
+	
+	switch ($button) {
+		case 'index':
+		echo "HOME";
+		break;		
+		case 'services':
+		echo "SERVICES";
+		break;
+		case 'items':
+		echo "ITEMS";
+		break;
+		case 'contact':
+		echo "CONTACT";
+		break;
+		
+		default:
+		echo $button	;
+		break;
+	}
+}
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -21,26 +95,35 @@
 
 <body>
 <div id="blue_background">
-<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-	<div id="display_page">display page</div>
-<div class="container" id="page">
 
+<div id="header">
+		<div id="logo"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu/banner.png" alt="scrap"/></div>
+		
+		<div id="mainmenu"class="menuNdLogo">
+			<ul>
+				<li><a href="<?php echo getUrl('home'); ?>"><img src="<?php echo getImageUrl('home'); ?>" alt="scrap metal" /> </a>
+				</li>
+				<li><a href="<?php echo getUrl('services'); ?>"><img src="<?php echo getImageUrl('services'); ?>"alt="scrap metal" /> </a>
+				</li>
+				<li><a href="<?php echo getUrl('items'); ?>"><img	src="<?php echo getImageUrl('items'); ?>"alt="scrap alumunium" /> </a>
+				</li>
+				<li><a href="<?php echo getUrl('contact'); ?>"><img	src="<?php echo getImageUrl('contact'); ?>"alt="scrap copper" /> </a>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- mainmenu -->
+</div><!-- header -->	
+	
+<div id="display_page">
+	<div class="l_r_display"> <?php displayPage();?></div>
+	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/index">Admin</a></div>
+
+</div>
+
+<div class="container" id="page">	
 	
 	
-	
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

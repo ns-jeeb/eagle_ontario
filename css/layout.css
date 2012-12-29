@@ -1,20 +1,33 @@
 @CHARSET "ISO-8859-1";
 #blue_background{
-	background-color: blue;
-	height: 300px;
+	background-color: #005e9b;
+	height: 380px;
 }
 
 #display_page{
-	height: 50px;
-	background-color: red;
-	width: 955px;
+	background-color: white;
+	height: 50px;	
+	width: 1024px;
 	margin-left: auto;
 	margin-right:auto;
+	
 }
 
 #logo{
-	margin-left: auto;
-	margin-right:auto;
-	background-color:green;
-	width: 915px;
+		
+	width: 1024px;
+	height: 296px;
+}
+
+
+.l_r_display{
+	position : absolute;
+	width: 52%;
+	border: 1px solid red;
+	float: right;
+	padding: 10px;
+}
+
+#display{
+	text-align: right;
 }
