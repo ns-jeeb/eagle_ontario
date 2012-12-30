@@ -67,7 +67,7 @@ function displayPage()
 		break;
 		
 		default:
-		echo $button	;
+		//echo $button	;
 		break;
 	}
 }
@@ -117,7 +117,7 @@ function displayPage()
 	
 <div id="display_page">
 	<div class="l_r_display"> <?php displayPage();?></div>
-	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/index" id="admin">Admin</a></div>
+	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/imageupload" id="admin">Admin</a></div>
 
 </div>
 

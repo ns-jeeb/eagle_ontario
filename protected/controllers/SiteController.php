@@ -25,6 +25,12 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+	
+	public function actionImageUpload()
+	{
+		$this->render('imageupload');
+	}
+	
 	public function actionIndex()
 	{
 		// renders the view file 'protected/views/site/index.php'
