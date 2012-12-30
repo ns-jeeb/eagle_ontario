@@ -9,9 +9,18 @@ class AdminController extends Controller
 	 */
 	public function actionIndex()
 	{
+		
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		
+		$user = Yii::app()->user;
+		if ($user->isGuest) {
+			echo 'is not logged in';
+			echo $this->redirect(Yii::app()->baseurl."/index.php?r=admin/login");
+		} else {
+			echo 'is logged in'; 
+			echo $this->redirect(Yii::app()->baseurl."/index.php?r=admin/items");
+		} 
 	}
 	
 	public function actionItems()
@@ -40,6 +49,7 @@ class AdminController extends Controller
 	 */
 	public function actionLogin()
 	{
+		Yii::app()->user->setReturnUrl(Yii::app()->baseurl."/index.php?r=admin/index");
 		$model=new LoginForm;
 
 		// if it is ajax validation request
