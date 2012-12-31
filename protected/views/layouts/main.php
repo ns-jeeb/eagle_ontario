@@ -72,6 +72,18 @@ function displayPage()
 	}
 }
 
+function displayAdmin() {
+	
+	$user = Yii::app()->user;
+	if ($user->isGuest) {
+		//echo 'is not logged in';
+		echo "<a href='index.php?r=admin/index' id='admin'>Admin</a>";
+	} else {
+		//echo 'is logged in';
+		echo "<a href='index.php?r=admin/logout' id='admin'>Logout</a>";
+	}
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -116,9 +128,9 @@ function displayPage()
 </div><!-- header -->	
 	
 <div id="display_page">
-	<div class="l_r_display"> <?php displayPage();?></div>
-	<div class="l_r_display" id ="display"> <a href ="index.php?r=site/imageupload" id="admin">Admin</a></div>
 
+	<div class="l_r_display"> <?php displayPage();?></div>
+	<div class="l_r_display" id ="display"> <?php displayAdmin();?></div>
 </div>
 
 <div class="container" id="page">	
