@@ -1,0 +1,301 @@
+2012/12/31 19:01:35 [error] [php] Trying to get property of non-object (C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\site\items.php:8)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\SiteController.php(47): SiteController->render()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionItems()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=site/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\site\items.php (8)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\SiteController.php (47)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/31 19:03:09 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Users\Pirdod\My Work\GitHub\eagle_ontario\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\Users\Pirdod...')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CClientScript.php(462): CAssetManager->publish('C:\Users\Pirdod...')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(788): CController->processOutput('<!DOCTYPE html ...')
+#8 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\SiteController.php(94): CController->render('contact', Array)
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionContact()
+#10 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('contact')
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=site/contact
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=site/items
+---
+2012/12/31 19:22:23 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `user` `t` WHERE User Name=:User Name LIMIT 1.
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php (20)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\models\LoginForm.php (52)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (67)
+2012/12/31 19:22:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `user` `t` WHERE User Name=:User Name LIMIT 1' in C:\Users\Pirdod\My Work\GitHub\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php(20): CActiveRecord->find('User Name=:User...', Array)
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(67): CModel->validate()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#10 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/login')
+#15 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/login
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/login
+---
+2012/12/31 19:29:04 [error] [php] Trying to get property of non-object (C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php:21)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(67): LoginForm->validate()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/login
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php (21)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\models\LoginForm.php (52)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (67)
+2012/12/31 19:43:55 [error] [php] Trying to get property of non-object (C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php:21)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(67): LoginForm->validate()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/login
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\components\UserIdentity.php (21)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\models\LoginForm.php (52)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (67)
+2012/12/31 20:01:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/view')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/view&id=1
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
+---
+2012/12/31 20:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/update')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/update&id=1
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
+---
+2012/12/31 20:17:43 [error] [exception.CException] exception 'CException' with message 'Property "CDataColumn.buttons" is not defined.' in C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\YiiBase.php(220): CComponent->__set('buttons', Array)
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(363): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(334): CGridView->initColumns()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php(19): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(126): require('C:\Users\Pirdod...')
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Pirdod...', NULL, true)
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Pirdod...', NULL, true)
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): CController->renderPartial('items', NULL, true)
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): CController->render('items')
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('items')
+#16 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/items')
+#17 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/login
+---
+2012/12/31 20:18:24 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, no array or string given (C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CComponent.php:611)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CButtonColumn.php(295): CButtonColumn->renderButton()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridColumn.php(144): CButtonColumn->renderDataCellContent()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(589): CButtonColumn->renderDataCell()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(173): CGridView->run()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php(19): AdminController->widget()
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(126): require()
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#15 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#16 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#17 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#19 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#20 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#21 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (19)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/31 20:19:56 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, no array or string given (C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CComponent.php:611)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CButtonColumn.php(295): CButtonColumn->renderButton()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridColumn.php(144): CButtonColumn->renderDataCellContent()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(589): CButtonColumn->renderDataCell()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(173): CGridView->run()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php(19): AdminController->widget()
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(126): require()
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#15 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#16 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#17 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#19 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#20 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#21 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (19)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/31 20:20:04 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, no array or string given (C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CComponent.php:611)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CButtonColumn.php(295): CButtonColumn->renderButton()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridColumn.php(144): CButtonColumn->renderDataCellContent()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(589): CButtonColumn->renderDataCell()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(173): CGridView->run()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php(19): AdminController->widget()
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(126): require()
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#15 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#16 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#17 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#19 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#20 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#21 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (19)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/31 20:20:54 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, no array or string given (C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CComponent.php:611)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CButtonColumn.php(295): CButtonColumn->renderButton()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridColumn.php(144): CButtonColumn->renderDataCellContent()
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(589): CButtonColumn->renderDataCell()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(173): CGridView->run()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php(19): AdminController->widget()
+#11 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(126): require()
+#12 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#13 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#14 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#15 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#16 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#17 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#19 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#20 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#21 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (19)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/31 20:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/update')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/update&id=1
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
+---
+2012/12/31 20:32:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/update')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/update&id=1
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
+---
+2012/12/31 20:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/update')
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/update&id=1
+HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
+---
