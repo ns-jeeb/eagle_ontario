@@ -15,10 +15,10 @@ class AdminController extends Controller
 		
 		$user = Yii::app()->user;
 		if ($user->isGuest) {
-			echo 'is not logged in';
+			//echo 'is not logged in';
 			echo $this->redirect(Yii::app()->baseurl."/index.php?r=admin/login");
 		} else {
-			echo 'is logged in'; 
+			//echo 'is logged in'; 
 			echo $this->redirect(Yii::app()->baseurl."/index.php?r=admin/items");
 		} 
 	}

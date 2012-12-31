@@ -300,3 +300,37 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/
 ---
+2012/12/30 02:04:55 [error] [php] Undefined variable: form (C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php:5)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#2 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (5)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
+2012/12/30 02:27:25 [error] [php] Undefined variable: form (C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php:5)
+Stack trace:
+#0 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(869): AdminController->renderFile()
+#1 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(782): AdminController->renderPartial()
+#2 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php(30): AdminController->render()
+#3 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionItems()
+#4 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(286): AdminController->runAction()
+#6 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\Users\Pirdod\My Work\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Pirdod\My Work\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/items
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\views\admin\items.php (5)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\protected\controllers\AdminController.php (30)
+in C:\Users\Pirdod\My Work\GitHub\eagle_ontario\index.php (13)
