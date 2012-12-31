@@ -67,7 +67,7 @@ function displayPage()
 		break;
 		
 		default:
-		echo $button	;
+		//echo $button	;
 		break;
 	}
 }
@@ -131,7 +131,6 @@ function displayAdmin() {
 
 	<div class="l_r_display"> <?php displayPage();?></div>
 	<div class="l_r_display" id ="display"> <?php displayAdmin();?></div>
-
 </div>
 
 <div class="container" id="page">	
