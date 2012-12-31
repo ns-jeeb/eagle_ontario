@@ -13,5 +13,6 @@
 		ferrous and non-ferrous scrap metals from the manufacturing, dealer and service industries.
 		</p>
 	</div>
+	
 </div>
 
