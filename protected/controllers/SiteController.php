@@ -43,8 +43,10 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+
 		$item = Item::model()->findAll();
 		$this->render('items',array('item'=>$item));
+
 	}
 	
 	public function actionServices()
