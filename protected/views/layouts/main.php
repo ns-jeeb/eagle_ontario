@@ -80,6 +80,7 @@ function displayAdmin() {
 		echo "<a href='index.php?r=admin/index' id='admin'>Admin</a>";
 	} else {
 		//echo 'is logged in';
+		echo "<a href='index.php?r=admin/items' id='admin'>Edit Items</a> | ";
 		echo "<a href='index.php?r=admin/logout' id='admin'>Logout</a>";
 	}
 }
