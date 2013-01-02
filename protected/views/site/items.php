@@ -12,7 +12,7 @@
 			{
 				echo "<td>".$item[$i]->title."</td>";
 				echo "<td>".$item[$i]->description."</td>";
-				echo "<td>".$item[$i]->picture."</td>";
+				echo "<td><img src='".$item[$i]->picture."' alt='scrap'/></td>";
 				echo "<td>".$item[$i]->link."</td>";
 			}
 				

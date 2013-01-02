@@ -597,3 +597,17 @@ REQUEST_URI=/GitHub/eagle_ontario/index.php?r=admin/update&id=1
 HTTP_REFERER=http://localhost/GitHub/eagle_ontario/index.php?r=admin/items
 >>>>>>> 59b3e38da8d649c4e676258b9b4910dd39c05db6
 ---
+2013/01/01 19:57:43 [error] [php] include(C:\xampp\htdocs\GitHub\eagle_ontario\protected\extensions\yii-mail\YiiMailMessage.php): failed to open stream: No such file or directory (C:\xampp\htdocs\GitHub\framework\YiiBase.php:397)
+Stack trace:
+#0 C:\xampp\htdocs\GitHub\eagle_ontario\protected\controllers\SiteController.php(80): spl_autoload_call()
+#1 C:\xampp\htdocs\GitHub\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#2 C:\xampp\htdocs\GitHub\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\GitHub\framework\web\CController.php(287): SiteController->runAction()
+#4 C:\xampp\htdocs\GitHub\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\GitHub\framework\web\CWebApplication.php(283): SiteController->run()
+#6 C:\xampp\htdocs\GitHub\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 C:\xampp\htdocs\GitHub\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\GitHub\eagle_ontario\index.php(13): CWebApplication->run()
+REQUEST_URI=/github/eagle_ontario/index.php?r=site/contact
+in C:\xampp\htdocs\GitHub\eagle_ontario\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\GitHub\eagle_ontario\index.php (13)

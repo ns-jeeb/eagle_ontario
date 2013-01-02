@@ -82,6 +82,11 @@ class AdminController extends Controller
 	{
 		$this->render('imageupload');
 	}
+	
+	public function actionInsertImage()
+	{
+		$this->render('insert');
+	}
 
 	/**
 	 * This is the action to handle external exceptions.
