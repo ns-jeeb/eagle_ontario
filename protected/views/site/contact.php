@@ -4,9 +4,6 @@
 /* @var $form CActiveForm */
 
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
-$this->breadcrumbs=array(
-	'Contact',
-);
 ?>
 
 <h1>Contact Us</h1>
@@ -23,6 +20,7 @@ $this->breadcrumbs=array(
 If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
 </p>
 
+<hr style="background-color: gray;" />
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

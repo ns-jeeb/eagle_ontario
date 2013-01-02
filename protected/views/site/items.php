@@ -2,7 +2,7 @@
 // $items should have lla the images form database and diplay in the follwing table....
 
 //print_r($item);
-	echo "<table><th>Name</th><th>Description</th><th>Picture</th><th>Link</th>";
+	echo "<table><tr><th>Name</th><th>Description</th><th>Picture</th><th>Link</th></tr>";
 	for ($i =0; $i<count($item); $i++)
 	{
 		echo "<tr>";
@@ -23,6 +23,6 @@
 		echo "</tr>";
 
 	}
-	echo "</tr><table>";
+	echo "</table>";
 ?>
 

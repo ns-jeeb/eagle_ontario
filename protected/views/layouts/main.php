@@ -111,10 +111,9 @@ function displayAdmin() {
 
 <body>
 <div id="blue_background">
-
-<div id="header">
-		<div id="logo"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu/banner.png" alt="scrap"/></div>
-		
+	<div id="header">
+		<div id="logo"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu/banner.png" alt="scrap"/>
+		</div>
 		<div id="mainmenu"class="menuNdLogo">
 			<ul>
 				<li><a href="<?php echo getUrl('home'); ?>"><img src="<?php echo getImageUrl('home'); ?>" alt="scrap metal" /> </a>
@@ -125,38 +124,30 @@ function displayAdmin() {
 				</li>
 				<li><a href="<?php echo getUrl('contact'); ?>"><img	src="<?php echo getImageUrl('contact'); ?>"alt="scrap copper" /> </a>
 				</li>
-				
+					
 			</ul>
-		</div>
-		<!-- mainmenu -->
-</div><!-- header -->	
+		</div><!-- mainmenu -->
+	</div><!-- header -->		
+	<div id="display_page">
+		<div class="l_r_display"> <?php displayPage();?></div>
+		<div class="l_r_display" id ="display"> <?php displayAdmin();?></div>
+	</div>
+	<div class="container" id="page">	
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+			)); ?><!-- breadcrumbs -->
+		<?php endif?>
 	
-<div id="display_page">
-
-	<div class="l_r_display"> <?php displayPage();?></div>
-	<div class="l_r_display" id ="display"> <?php displayAdmin();?></div>
-</div>
-
-<div class="container" id="page">	
-	
-	
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> Eagle Ontario Metal and Scrap.<br/>
-		All Rights Reserved.<br/>
-		<?php echo "Powerd by ". "<a href='http://inlightdevelopment.com/'>Inlightdevelopment</a>"; ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
+		<?php echo $content; ?>
+		<div class="clear"></div>
+		<hr style="background-color: gray;" />
+		<div id="footer">
+			Copyright &copy; <?php echo date('Y'); ?> Eagle Ontario Metal and Scrap.<br/>
+			All Rights Reserved.<br/>
+			<?php echo "Powerd by ". "<a href='http://inlightdevelopment.com/'>Inlightdevelopment</a>"; ?>
+		</div><!-- footer -->
+	</div><!-- page -->
 </div>
 </body>
 </html>

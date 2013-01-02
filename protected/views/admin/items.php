@@ -13,7 +13,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'type'=>'html',
             'value'=>'CHtml::image($data->picture, $data->title, array("style"=>"height:45px;"))',
         ),
-        'picture',
 		'description',
 		'link',
         array(            // display a column with "view", "update" and "delete" buttons
