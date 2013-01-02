@@ -88,10 +88,8 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-<<<<<<< HEAD
+
 		'adminEmail'=>'najeeb@inlightdevelopment.com',
-=======
-		'adminEmail'=>'pirdod@gmail.com',
->>>>>>> pirdad
+
 	),
 );
