@@ -114,17 +114,17 @@ function displayAdmin() {
 	<div id="header">
 		<div id="logo"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/menu/banner.png" alt="scrap"/>
 		</div>
-		<div id="mainmenu"class="menuNdLogo">
+		<div id="mainmenu" class="menuNdLogo">
 			<ul>
-				<li><a href="<?php echo getUrl('home'); ?>"><img src="<?php echo getImageUrl('home'); ?>" alt="scrap metal" /> </a>
+				<li>
+					<a href="<?php echo getUrl('home'); ?>"><img src="<?php echo getImageUrl('home'); ?>" alt="scrap metal" /></a>
+				</li><li>
+					<a href="<?php echo getUrl('services'); ?>"><img src="<?php echo getImageUrl('services'); ?>"alt="scrap metal" /></a>
+				</li><li>
+					<a href="<?php echo getUrl('items'); ?>"><img src="<?php echo getImageUrl('items'); ?>"alt="scrap alumunium" /></a>
+				</li><li>
+					<a href="<?php echo getUrl('contact'); ?>"><img	src="<?php echo getImageUrl('contact'); ?>"alt="scrap copper" /></a>
 				</li>
-				<li><a href="<?php echo getUrl('services'); ?>"><img src="<?php echo getImageUrl('services'); ?>"alt="scrap metal" /> </a>
-				</li>
-				<li><a href="<?php echo getUrl('items'); ?>"><img	src="<?php echo getImageUrl('items'); ?>"alt="scrap alumunium" /> </a>
-				</li>
-				<li><a href="<?php echo getUrl('contact'); ?>"><img	src="<?php echo getImageUrl('contact'); ?>"alt="scrap copper" /> </a>
-				</li>
-					
 			</ul>
 		</div><!-- mainmenu -->
 	</div><!-- header -->		

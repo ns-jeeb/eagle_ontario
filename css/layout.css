@@ -31,11 +31,18 @@
 #display {
 	text-align: right;
 }
-#admin{color: #BFC8CE;font-family: sans-serif;}
+
+#admin{
+	color: #BFC8CE;
+	font-family: sans-serif;
+}
 
 .text_content{
-	float: right;
-	width: 48.5%;
 	padding: 5px;
 	text-align: left;
+}
+
+#index_welcome {
+	position: relative;
+	width: 50%;
 }
