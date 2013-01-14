@@ -1,27 +1,21 @@
+<h3>Accepted Metals</h3>
+<p>
+We accept the following metals.
+</p>
 <?php
-// $items should have lla the images form database and diplay in the follwing table....
 
-//print_r($item);
-	echo "<table><tr><th>Name</th><th>Picture</th><th>Description</th><th>Link</th></tr>";
-	for ($i =0; $i<count($item); $i++)
-	{
-		echo "<tr>";
-		if (!empty($item[$i]))
-		{
-			for ($td =0; $td< 1; $td++)
-			{
-				echo "<td>".$item[$i]->title."</td>";
-				echo "<td><img src='".$item[$i]->picture."' alt='scrap' style='width: 150px; background: red;' /></td>";
-				echo "<td>".$item[$i]->description."</td>";
-				echo "<td>".$item[$i]->link."</td>";
-			}
-				
-		}else
-		{
-				
-		}
-		echo "</tr>";
-
-	}
-	echo "</table>";
+for ($i = 0; $i < count($item); $i++) {
+?>
+	<div class='items_item'>	
+		<div class='items_item_image <?php if ($i == 0) echo "hr_top_item_image"; ?>' >
+			<img width='140px' src='<?php echo $item[$i]->picture; ?>' alt='<?php echo $item[$i]->title; ?>' />
+		</div>
+		<div class='items_item_text <?php if ($i == 0) echo "hr_top_item_text"; ?>'>
+			<h3><?php echo $item[$i]->title; ?></h3>	
+			<?php $link_text = (!empty($item[$i]->link)) ? "For more info click <a href='".$item[$i]->link."'>here</a>." : ""; ?>
+			<p><?php echo $item[$i]->description." ".$link_text.""; ?></p>
+		</div>
+	</div>
+<?php 
+}
 ?>

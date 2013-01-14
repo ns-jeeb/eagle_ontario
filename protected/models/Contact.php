@@ -1,16 +1,17 @@
 <?php
 
 /**
- * This is the model class for table "item".
+ * This is the model class for table "contact".
  *
  * The followings are the available columns in table 'item':
  * @property integer $id
- * @property string $title
- * @property string $picture
- * @property string $description
- * @property string $link
+ * @property string $contact
+ * @property string $phone
+ * @property string $email
+ * @property string $address
+ * @property string $map_embed
  */
-class Item extends CActiveRecord
+class Contact extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -27,7 +28,7 @@ class Item extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'item';
+		return 'contact';
 	}
 
 	/**
@@ -38,11 +39,13 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, picture, description', 'required'),
-			array('title, picture, link', 'length', 'max'=>255),
+			array('contact', 'required'),
+			array('email, address', 'length', 'max'=>255),
+			array('contact', 'length', 'max'=>100),
+			array('phone', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, picture, description, link', 'safe', 'on'=>'search'),
+			array('id, contact, phone, email, address', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +67,11 @@ class Item extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
-			'picture' => 'Picture',
-			'description' => 'Description',
-			'link' => 'Link',
+			'contact' => 'Contact',
+			'phone' => 'Phone',
+			'email' => 'Email',
+			'address' => 'Address',
+			'map_embed' => 'Map Embed',
 		);
 	}
 
@@ -83,10 +87,10 @@ class Item extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('picture',$this->picture,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('link',$this->link,true);
+		$criteria->compare('contact',$this->contact,true);
+		$criteria->compare('phone',$this->phone,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('address',$this->address,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

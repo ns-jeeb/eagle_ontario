@@ -11,7 +11,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
             'name'=>'picture',
             'type'=>'html',
-            'value'=>'CHtml::image($data->picture, $data->title, array("style"=>"height:45px;"))',
+            'value'=>'CHtml::image($data->picture, $data->picture, array("style"=>"height:45px;"))',
         ),
 		'description',
 		'link',

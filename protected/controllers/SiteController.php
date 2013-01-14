@@ -1,7 +1,7 @@
 <?php
 
 class SiteController extends Controller
-{
+{	
 	/**
 	 * Declares class-based actions.
 	 */
@@ -34,7 +34,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 
 		$item = Item::model()->findAll();
-		$this->render('items',array('item'=>$item));
+		$this->render('items', array('item'=>$item));
 
 	}
 	
