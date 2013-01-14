@@ -1,3 +1,8 @@
+html
+{
+	height: 100%;
+}
+
 body
 {
 	margin: 0;
@@ -5,80 +10,131 @@ body
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #b0bac2;
+	height: 100%;
 }
 
 #page
-{	
-	
-box-shadow:0px 0px 20px 2px rgba(0, 0, 0, 0.6);
-	
-	margin-bottom: 5px;
-	background: #d8e0e6;
+{		
+	box-shadow:0px 5px 20px 2px rgba(0, 0, 0, 0.6);	
+	margin-bottom: 20px;
+	background-color: silver;
 	border: 1px solid #C9E0ED;
 }
 
-#header
-{
-	
-box-shadow:0px 0px 20px 2px rgba(0, 0, 0, 0.6);
-
-	
+#banner
+{	
+	box-shadow:0px 5px 20px 2px rgba(0, 0, 0, 0.6);	
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 0px solid #C9E0ED;
 	width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#content
+#mainmenu
 {
-    padding: 20px;
+	position: relative;
+	margin-top: -70px;
+	width: 100%;
+	margin-left: -10px;
 }
 
-#sidebar
+.menu_button 
 {
-	padding: 20px 20px 20px 0;
+	position: relative;
+	display: inline;	
+}
+
+#mainmenu a
+{
+	position: relative;
+	margin-left: -2px;
+	margin-right: -2px;
+}
+
+#mainmenu a img
+{
+	border-top: thin solid rgba(0,110,255,0.9);
+}
+
+#mainmenu a:hover
+{
+	background-color: rgba(0,110,255,0.7);
+	height: 10px;
+}
+
+#content
+{
+	position: relative;
+	display: inline;
+	float: left;
+    padding: 20px;
+    width: 513px;
+    background-color: #d8e0e6;
+    margin-bottom: 0px;
+    min-height: 440px;
+}
+
+#contact_bar {
+	position: relative;
+	display: inline;
+	float: right;
+	width: 440px;
+	margin-top: 0px;
+	margin-right: 0px;
+	border: 0px solid #C9E0ED;
+	padding: 15px;
+	min-height: 440px;
+}
+
+.txt_contact_header 
+{
+	font-weight: bold;	
 }
 
 #footer
 {
 	padding: 10px;
-	margin: 10px 20px;
 	font-size: 0.8em;
 	text-align: center;
+	background-color: #d8e0e6;
 }
 
-#logo
-{}
+#blue_background{
+	background-color: #005e9b;
+	height: 380px;
+}
 
-#mainmenu
-{
+#display_page{
+	height: 40px;	
+	width: 1024px;
+	margin-left: auto;
+	margin-right:auto;	
+	margin-top: 5px;
+}
+
+.indicator_region {
 	position: relative;
-	width: auto;
-	top: -70px;
+	display: inline;
+	padding: 10px;
+	color: white;
+}
+
+#admin_region {
 	float: right;
 }
 
-#mainmenu ul
-{
-	width: 100%;
-	margin-right: 4px;
-	padding: 0px;
+#selected_page {
+	float: left;
+	font-weight: bold;
 }
 
-#mainmenu li
-{
-	position: relative;
-	display: inline;	
-	margin-left: -2px;
-	margin-right: -2px;
-	padding: 0px;
-}
-
-#mainmenu ul li a:hover, #mainmenu ul li.active a
-{
-	background-color:#07334f;
+#admin{
+	color: #BFC8CE;
+	font-family: sans-serif;
+	font-style: normal;
+	text-decoration: none;
 }
 
 div.flash-error, div.flash-notice, div.flash-success

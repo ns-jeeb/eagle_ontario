@@ -21,7 +21,10 @@ if (isset($item)) {
 $item_picture_html = "";
 if (!empty($item_picture) && $item_picture != "...") {
 					
-	$item_picture_html = "If you want to change the picture, click on 'Choose File'.<br><img src='".$item_picture."' alt='".$item_title."' width='120px' /><br>";	
+	$item_picture_html = "If you want to change the picture, click on 'Browse'.<br>";
+	$item_picture_html .= "<img src='".$item_picture."' alt='".$item_title."' width='120px' /><br>";
+	$item_picture_html .= "<span>Image Path: ".$item_picture."</span><br>";	
+	$item_picture_html .= "<input type='hidden' name='n_pic_path' value='$item_picture' />";
 					
 } else {
 	
@@ -33,16 +36,16 @@ $item_picture_html .= "<!--<input type='hidden' name='MAX_FILE_SIZE' value='3000
 
 echo
 <<<HTML
-<form enctype="multipart/form-data" action="$base_url/index.php?r=admin/save" method="post">
+<form enctype="multipart/form-data" action="$base_url/index.php?r=admin/save" method="post" id="frm_update" >
 
 	<input type="hidden" name="n_id" value="$item_id" />
 	<table border="0" style="width='100%' cellpadding='3' cellspacing='3'">
 		<tr>
-			<td>Title:</td>
+			<td><span class="required_input">*</span> Title:</td>
 			<td><input type="text" name="n_title" value="$item_title" style="width:100%;" /></td>
 		</tr>
 		<tr>
-			<td>Picture:</td>    		
+			<td><span class="required_input">*</span> Picture:</td>    		
 			<td>
 HTML
 .
@@ -52,8 +55,8 @@ $item_picture_html
 			</td>
 		</tr>
 		<tr>
-			<td>Description:</td>
-			<td><textarea name="n_desc" rows="10" style="width:100%; resize:none;">$item_description</textarea></td>
+			<td><span class="required_input">*</span> Description:</td>
+			<td><textarea name="n_desc" rows="10" style="width:100%; resize:vertical;">$item_description</textarea></td>
 		</tr>
 		<tr>
 			<td>Description Link:</td>
@@ -61,7 +64,10 @@ $item_picture_html
 		</tr>
 		<tr>
 			<td></td>
-			<td><input type="submit" name="n_submit" value="Save" /></td>
+			<td>
+			<input type="submit" name="n_submit" value="Save" />
+			<button onclick="$('frm_update').action='index.php?r=admin/items';$('frm_update').submit();">Cancel</button>
+			</td>
 		</tr>
 	</table>
 
